@@ -6,10 +6,15 @@
 
 export function reverseArray(array) {
   // Your code goes here...
-
+  let arr = [];
+  for (let i = 0; i < array.length; i++) {
+    arr.push(array[array.length-1-i]);
+  }
+  return arr;
 }
 
-
+console.log(reverseArray([1, 2, 3 ,4]));
+console.log(reverseArray(['one', 'two', 'three']));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-19"

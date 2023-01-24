@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The for loops exercises set",
   "main": "part1.js",
+  "type": "module",
   "scripts": {
     "test-all": "vitest --run",
     "test-1": "vitest --run e1.",

@@ -5,10 +5,14 @@
 
 export function getAverage(array) {
   // Your code goes here...
-
+  let num = 0;
+  for(let i = 0; i < array.length; i++) {
+    num += array[i];
+  }
+  return num/array.length;
 }
 
-
+console.log(getAverage([22, 45, 4, 65]));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
