@@ -7,8 +7,10 @@ export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
  let arr = [];
  for(let i = 0; i < array.length; i++) {
-  if (array[i].name.toLowerCase().includes(letter)) {
-    arr.push(array[i].name);
+  for(let j = 0; j < array[i].name.length; j++) {
+    if (array[i].name[j].toLowerCase() === letter.toLowerCase()) {
+      arr.push(array[i].name);
+    }
   }
  }
  return arr;
@@ -32,7 +34,7 @@ console.log(getClientsWithLetterInName([
   },
   { id: 4, name: "Candy", balance: 0.0 },
   { id: 5, name: "Phil", balance: 18, deposits: [100, 18], withdrawals: [100] },
-], "c"));
+], "M"));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"

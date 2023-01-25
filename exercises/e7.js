@@ -8,7 +8,8 @@ export function getClientWithLeastBalance(array) {
   let arr = [];
   for(let i = 0; i < array.length; i++) {
     if (arr[0] === undefined || arr[0].balance > array[i].balance && array[i].balance > 0) {
-      arr.splice(0, 1, array[i]);
+      arr = [];
+      arr.push(array[i]);
     }
   }
   return arr;
